@@ -15,6 +15,7 @@
 		79B042692634A91F00F016F8 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B042682634A91F00F016F8 /* Helper.swift */; };
 		79B0426C2634A92600F016F8 /* menu.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0426B2634A92600F016F8 /* menu.json */; };
 		79B042722634A94600F016F8 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B042712634A94600F016F8 /* Menu.swift */; };
+		79D583492634CD7D00ACAEE0 /* ItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D583482634CD7D00ACAEE0 /* ItemRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		79B042682634A91F00F016F8 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Helper.swift; path = "../../idine-2/Helper.swift"; sourceTree = "<group>"; };
 		79B0426B2634A92600F016F8 /* menu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = menu.json; path = "../../idine-2/menu.json"; sourceTree = "<group>"; };
 		79B042712634A94600F016F8 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Menu.swift; path = "../../idine-2/Menu.swift"; sourceTree = "<group>"; };
+		79D583482634CD7D00ACAEE0 /* ItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				79B042652634A91500F016F8 /* Order.swift */,
 				79B042552634A82400F016F8 /* iDineApp.swift */,
 				79B042572634A82400F016F8 /* ContentView.swift */,
+				79D583482634CD7D00ACAEE0 /* ItemRow.swift */,
 				79B042592634A82600F016F8 /* Assets.xcassets */,
 				79B0425E2634A82600F016F8 /* Info.plist */,
 				79B0425B2634A82600F016F8 /* Preview Content */,
@@ -154,6 +157,7 @@
 				79B042662634A91500F016F8 /* Order.swift in Sources */,
 				79B042582634A82400F016F8 /* ContentView.swift in Sources */,
 				79B042562634A82400F016F8 /* iDineApp.swift in Sources */,
+				79D583492634CD7D00ACAEE0 /* ItemRow.swift in Sources */,
 				79B042692634A91F00F016F8 /* Helper.swift in Sources */,
 				79B042722634A94600F016F8 /* Menu.swift in Sources */,
 			);
