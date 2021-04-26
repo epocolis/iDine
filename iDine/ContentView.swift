@@ -6,21 +6,15 @@
 //
 /*
  
- So, what did we actually just do?
+ When you want to show two separate views with SwiftUI, the easiest and most user-intuitive approach is with a tab
+ bar across the bottom of our app. In our case, that means we’ll put our menu view in one tab and the active order
+ in another. SwiftUI gives us a TabView for just this purpose, and it works much like a UITabBarController.
 
- Well, we want a way for users to look at items in the menu and add them to an order. But we also want their
- ordered items to appear somewhere else in the app.
+ Press Cmd+N to create a new SwiftUI View, calling it “MainView”. Creating tabs is as easy as putting different
+ views inside an instance of TabView, but in order to add an image and text to the tab bar item of each view we
+ need to use the tabItem() modifier.
 
- Environment objects are SwiftUI’s way of sharing data across many places, but by themselves they aren’t a
- complete solution because it would be easy for different parts of our UI to show different things based on when
- they loaded. With the ObservableObject protocol we’ve given our Order class the ability to announce that it has
- changed, and we can now make SwiftUI watch for those announcements and reload the UI.
-
- We just created an instance of Order and placed it into the environment. As a result, any view that comes from
- ContentView can read that order back out and manipulate it somehow.
-
- We want to add items to our order from the detail screen, so head back to ItemDetail.swift and give it this
- property:
+ Let’s start with the code – change MainView to this:
 
  */
 
