@@ -6,11 +6,15 @@
 //
 /*
  
- Just having names of menu items written out isn’t particularly appealing for a restaurant, so let’s make those items look good.
+ We want to let folks place an order for pick up by selecting items and adding them to a cart. I already gave you a dedicated Order class that holds an array of items, so we’re going to add items to that then show them in a dedicated order view.
 
- First, though, an important lesson: SwiftUI is designed to be composable, which means you can make views out of any other views you like. We have a simple text view for our items right now, Text(item.name), but we’re going to add much more in there to bring it to life. While we could put that directly into ContentView.swift, it becomes long and hard to read.
+ But there’s a catch: if we’re adding things inside ItemDetail, how can we show them in an entirely separate OrderView? More importantly, how can we make sure both of these two update each other as things change?
 
- A better idea is to make a new view type that we can embed inside ContentView, and SwiftUI is designed to make this both easy (it takes only 30 seconds to learn) and extremely fast (it has almost zero performance impact).
+ Well, SwiftUI has a quite brilliant solution called environment objects. These are objects that our views can use freely, but don’t create or manage – they get created elsewhere, and carry on existing after the view has gone away.
+
+ In this app, we’re going to create an instance of our order when the app launches, then pass it into our content view. Any view that is inside that content view – anything that can call the content view its ancestor – will automatically gain access to that environment object. Even better, when any view changes it, all other places automatically update.
+
+
  
  
  
