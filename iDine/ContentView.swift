@@ -6,15 +6,23 @@
 //
 /*
  
- When you want to show two separate views with SwiftUI, the easiest and most user-intuitive approach is with a tab
- bar across the bottom of our app. In our case, that means we’ll put our menu view in one tab and the active order
- in another. SwiftUI gives us a TabView for just this purpose, and it works much like a UITabBarController.
+ So far we’ve let users browse the menu, add items to an order, then see their total order. What we haven’t done
+ is create a mechanism to confirm that order, so that’s our next job.
 
- Press Cmd+N to create a new SwiftUI View, calling it “MainView”. Creating tabs is as easy as putting different
- views inside an instance of TabView, but in order to add an image and text to the tab bar item of each view we
- need to use the tabItem() modifier.
+ While this won’t actually send anything off to a server somewhere, I do at least want to use this opportunity to
+ show off one of SwiftUI’s most impressive features: forms.
 
- Let’s start with the code – change MainView to this:
+ Forms are containers like stacks, but they are specifically designed for things like settings screens and user
+ input – anywhere the user might want to make several choices in one place. Forms do a few interesting things as
+ you’ll see, and along the way I’ll be showing you how to use common UI controls like pickers, text fields,
+ segmented controls, and more.
+
+ Now I know what you’re thinking: surely text fields are easy? Well, they aren’t hard, but they also don’t work
+ like you’re used to in UIKit.
+
+ To get things up and running let’s create a new CheckoutView struct that we’ll present when Place Order is
+ pressed. Press Cmd+N to add a new SwiftUI View called “CheckoutView”, then give it the same @EnvironmentObject
+ property the other views have:
 
  */
 

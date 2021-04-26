@@ -19,6 +19,7 @@
 		79D73D362636AFB80077EF64 /* ItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D73D352636AFB80077EF64 /* ItemDetail.swift */; };
 		79D73D382636BC3A0077EF64 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D73D372636BC3A0077EF64 /* OrderView.swift */; };
 		79D73D3A2636C04E0077EF64 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D73D392636C04E0077EF64 /* MainView.swift */; };
+		79D73D3C2636C4A30077EF64 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D73D3B2636C4A30077EF64 /* CheckoutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		79D73D352636AFB80077EF64 /* ItemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetail.swift; sourceTree = "<group>"; };
 		79D73D372636BC3A0077EF64 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
 		79D73D392636C04E0077EF64 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		79D73D3B2636C4A30077EF64 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				79B042552634A82400F016F8 /* iDineApp.swift */,
 				79D73D392636C04E0077EF64 /* MainView.swift */,
 				79B042572634A82400F016F8 /* ContentView.swift */,
+				79D73D3B2636C4A30077EF64 /* CheckoutView.swift */,
 				79D73D352636AFB80077EF64 /* ItemDetail.swift */,
 				79D73D372636BC3A0077EF64 /* OrderView.swift */,
 				79D583482634CD7D00ACAEE0 /* ItemRow.swift */,
@@ -165,6 +168,7 @@
 			files = (
 				79D73D362636AFB80077EF64 /* ItemDetail.swift in Sources */,
 				79D73D3A2636C04E0077EF64 /* MainView.swift in Sources */,
+				79D73D3C2636C4A30077EF64 /* CheckoutView.swift in Sources */,
 				79D73D382636BC3A0077EF64 /* OrderView.swift in Sources */,
 				79B042662634A91500F016F8 /* Order.swift in Sources */,
 				79B042582634A82400F016F8 /* ContentView.swift in Sources */,
