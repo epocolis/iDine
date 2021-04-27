@@ -6,23 +6,30 @@
 //
 /*
  
- So far we’ve let users browse the menu, add items to an order, then see their total order. What we haven’t done
- is create a mechanism to confirm that order, so that’s our next job.
+ If you look in the SwiftUI preview window you’ll see the standard iOS picker interface – a spinning wheel of
+ options. By default it will show the first option, because it reads the value of paymentType, which we set to
+ “Cash”. However, when the user moves the wheel their selection changes – they might select “Credit Card” or
+ “iDine Points” instead of cash.
 
- While this won’t actually send anything off to a server somewhere, I do at least want to use this opportunity to
- show off one of SwiftUI’s most impressive features: forms.
+ So, this picker doesn’t just read the value of paymentType, it also writes the value. This is what’s called a
+ two-way binding, because any changes to the value of paymentType will update the picker, and any changes to the
+ picker will update paymentType.
 
- Forms are containers like stacks, but they are specifically designed for things like settings screens and user
- input – anywhere the user might want to make several choices in one place. Forms do a few interesting things as
- you’ll see, and along the way I’ll be showing you how to use common UI controls like pickers, text fields,
- segmented controls, and more.
+ This is where the dollar sign comes in: Swift property wrappers use that to provide two-way bindings to their
+ data, so when we say $paymentType SwiftUI will write the value using the property wrapper, which will in turn
+ stash it away and cause the UI to refresh automatically.
 
- Now I know what you’re thinking: surely text fields are easy? Well, they aren’t hard, but they also don’t work
- like you’re used to in UIKit.
+ At first glance all these @ and $s might seem a bit un-Swifty, and it’s true that if you’re coming from UIKit you
+ might not used to working in this way. However, they allow us to get features that would otherwise require a lot
+ of hassle:
 
- To get things up and running let’s create a new CheckoutView struct that we’ll present when Place Order is
- pressed. Press Cmd+N to add a new SwiftUI View called “CheckoutView”, then give it the same @EnvironmentObject
- property the other views have:
+ Without @State we wouldn’t be able to change properties in our structs, because structs are fixed values.
+ Without StateObject we wouldn’t be able to create classes that stay alive for the duration of our app.
+ Without @EnvironmentObject we wouldn’t be able to receive shared data from elsewhere in our app.
+ Without ObservableObject we wouldn’t be notified when an external value changes.
+ Without $property two-way bindings we would need to update values by hand.
+ Anyway, that’s our basic picker complete, so if we return to OrderView.swift we can update our code so that it
+ shows our new CheckoutView struct rather than some text saying “Checkout”.
 
  */
 
