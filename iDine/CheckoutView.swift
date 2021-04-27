@@ -14,10 +14,19 @@ struct CheckoutView: View {
     @State private var loyaltyNumber = ""
     @State private var tipAmount = 0
     @State private var showingPaymentAlert = false
-    private var totalPrice = "100"
+    
     
     let tipAmounts = [0,10, 15,20,25]
     
+    var totalPrice: String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        
+        let total = Double(order.total)
+        let tipValue = total / 100 * Double(tipAmount)
+        
+        return formatter.string(from: NSNumber(value:total + tipValue)) ?? "$0"
+    }
     
     let paymentTypes = ["Cash","Credit Card", "iDine Points"]
     var body: some View {
@@ -47,7 +56,10 @@ struct CheckoutView: View {
                 
             }
             
-            Section(header:Text("TOTAL: $100").padding(.leading, 15)){
+            Section(header:
+                        Text("TOTAL: \(totalPrice)")
+                        .font(.largeTitle)
+                        .padding(.leading, 15)){
                 Button("Confirm order"){
                     // place the order
                     showingPaymentAlert.toggle()
